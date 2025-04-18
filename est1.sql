@@ -1,9 +1,21 @@
+CREATE TABLE funcionarios (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(50),
+    data_nascimento DATE
+);
+
 CREATE TABLE projetos (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(100),
     descricao TEXT,
     data_inicio DATE,
     status VARCHAR(20)
+);
+
+CREATE TABLE funcionarios_projetos (
+    id SERIAL PRIMARY KEY,
+    id_funcionario INT REFERENCES funcionarios(id),
+    id_projeto INT REFERENCES projetos(id)
 );
 
 INSERT INTO projetos (nome, descricao, data_inicio, status)
