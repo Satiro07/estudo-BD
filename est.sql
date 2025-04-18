@@ -5,3 +5,6 @@ CREATE TABLE funcionarios (
     data_nascimento DATE,
     data_registro TIMESTAMP
 )
+
+INSERT INTO funcionarios (nome, cargo, data_nascimento, data_registro)
+VALUES ('Maria', 'chefe', '2008-04-05', NOW());
