@@ -38,14 +38,10 @@ VALUES
 (2,2),
 (3,3);
 
-SELECT * FROM funcionarios;
-
-SELECT * FROM projetos;
-
-SELECT * FROM funcionarios_projetos;
 
 SELECT f.nome AS funcionario, p.nome AS projeto
 FROM funcionarios_projetos fp
 JOIN funcionarios f ON fp.id_funcionario = f.id
 JOIN projetos p ON fp.id_projeto = p.id;
+
 
