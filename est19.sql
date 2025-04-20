@@ -28,3 +28,10 @@ SELECT
     l.ano_publicacao AS "Ano de Publicação"
 FROM livros l
 ORDER BY l.ano_publicacao;
+
+-- orderna pelo nome do autor, ordem alfabética
+SELECT 
+    l.autor AS "Autor",
+    l.titulo AS "Título"
+FROM livros l
+ORDER BY l.autor;
