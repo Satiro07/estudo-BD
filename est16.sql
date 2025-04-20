@@ -32,7 +32,7 @@ INSERT INTO empregados_projetos (id_empregado, id_projeto, horas_trabalhadas)
 VALUES
 (1,1, 3),
 (2,2, 7),
-(2,2, 5);
+(3,3, 5);
 
 SELECT
     e.nome AS Nome_do_Empregado,
