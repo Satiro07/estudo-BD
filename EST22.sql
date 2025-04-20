@@ -54,5 +54,6 @@ SELECT
     e.titulo AS "Título",
     SUM(e.preco_ingresso * v.quantidade) AS "Total arrecadado"
 FROM vendas v
-JOIN eventos e ON e.id_evento = e.id
-GROUP BY e.titulo;
+JOIN eventos e ON v.id_evento = e.id
+GROUP BY e.titulo
+ORDER BY SUM(e.preco_ingresso * v.quantidade) DESC;
