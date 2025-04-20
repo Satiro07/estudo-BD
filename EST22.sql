@@ -71,4 +71,5 @@ SELECT
     v.data_venda AS "Data",
     SUM(v.quantidade) AS "Número total de vendas"
 FROM vendas v
-GROUP BY v.data_venda;
+GROUP BY v.data_venda
+ORDER BY v.data_venda;
