@@ -66,3 +66,9 @@ JOIN clientes c ON v.id_cliente = c.id
 JOIN eventos e ON v.id_evento = e.id
 GROUP BY c.nome
 ORDER BY SUM(e.preco_ingresso * v.quantidade) DESC;
+
+SELECT 
+    v.data_venda AS "Data",
+    SUM(v.quantidade) AS "Número total de vendas"
+FROM vendas v
+GROUP BY v.data_venda;
