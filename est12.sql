@@ -9,6 +9,18 @@ CREATE TABLE divisao (
     id_time INT REFERENCES times(id)
 );
 
+CREATE TABLE times_divisao (
+   id_time INT REFERENCES times(id),
+   id_divisao INT REFERENCES divisao(id)
+);
+
+INSERT INTO times_divisao(id_time, id_divisao)
+VALUES
+(1, 1),
+(2,2),
+(3,3),
+(4,4);
+
 INSERT INTO times (nome)
 VALUES
 ('Flamengo'),
@@ -26,5 +38,5 @@ VALUES
 SELECT 
     t.nome AS Nome_time,
     d.nome AS Divisao
-FROM divisao d
-JOIN times t ON d.id_time = t.id
+FROM times_divisao td
+JOIN times t ON td.id_time = td.id
