@@ -73,3 +73,12 @@ SELECT
 FROM vendas v
 GROUP BY v.data_venda
 ORDER BY v.data_venda;
+
+SELECT 
+    c.nome as "Cliente",
+    SUM(e.preco_ingresso * v.quantidade) AS "Gasto total do cliente"
+FROM vendas v
+JOIN clientes c ON v.id_cliente = c.id
+JOIN eventos e ON v.id_evento = e.id
+GROUP BY c.nome
+ORDER BY SUM(e.preco_ingresso * v.quantidade) DESC;
