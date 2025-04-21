@@ -1,7 +1,8 @@
 SELECT
-    CONCAT(c.first_name, ' ', c.last_name) AS "Nome do cliente",
-    ci.city AS "Nome da cidade"
+    s.store_id AS "ID da loja",
+    a.address AS "Endereço",
+    c.city AS "Cidade"
 FROM address a
-INNER JOIN customer c ON a.address_id = c.address_id
-INNER JOIN city ci ON a.city_id = ci.city_id
+INNER JOIN store s ON a.address_id = s.address_id
+INNER JOIN city c ON a.city_id = c.city_id
 LIMIT 10;
