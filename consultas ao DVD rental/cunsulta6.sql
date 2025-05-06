@@ -7,3 +7,4 @@ FROM staff st
 INNER JOIN payment p ON st.staff_id = p.staff_id
 INNER JOIN store s ON st.store_id = s.store_id
 GROUP BY s.store_id
+
