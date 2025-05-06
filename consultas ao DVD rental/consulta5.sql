@@ -6,3 +6,4 @@ SELECT
     p.payment_date AS "Data do pagamento"
 FROM customer c
 INNER JOIN payment p ON c.customer_id = p.customer_id
+WHERE CONCAT(c.first_name, ' ', c.last_name) = 'Peter Menard'
